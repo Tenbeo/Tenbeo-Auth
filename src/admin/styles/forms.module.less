@@ -1,0 +1,167 @@
+
+// ----------------------------------------------------------------------------- BUTTON
+
+.Button {
+	all: unset;
+	cursor: pointer;
+	border-radius: 4px;
+	border: 1px solid var(--palette-grey-800);
+	background: var(--palette-grey-900);
+	padding: 6px 12px;
+	display: inline-block;
+	color: currentColor;
+	text-decoration: none;
+	white-space: nowrap;
+	> svg {
+		display: inline-block;
+		margin-right: 5px;
+		vertical-align: top;
+		position: relative;
+		top: 1px;
+	}
+	> span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.Button__positive {
+	background-color: var(--palette-green-800);
+}
+.Button__negative {
+	background-color: var(--palette-red-800);
+}
+.Button__eminent {
+	background-color: var(--palette-blue-800);
+}
+
+// ----------------------------------------------------------------------------- TABLE
+
+.Table {
+	--table-head-background-color: var(--palette-grey-900);
+	--table-border-color: var(--palette-grey-800);
+
+	--table-padding: 8px;
+	--table-action-gap: 8px;
+
+	//table-layout: fixed;
+	width: 100%;
+	max-width: 100%;
+	border-collapse: collapse;
+
+	thead {
+		background: var(--table-head-background-color);
+		th {
+			border: 1px solid var(--table-border-color);
+			padding: var(--table-padding);
+		}
+	}
+
+	td {
+		padding: var(--table-padding);
+		border: 1px solid var(--table-border-color);
+		white-space: nowrap;
+	}
+}
+
+.Table_ellipsis {
+	max-width: 0;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.Table_tags {
+	//max-width: 50%;
+	div {
+		display: flex;
+		gap: 3px;
+		flex-wrap: wrap;
+		justify-content: center;
+		span {
+			font-size: 12px;
+			white-space: nowrap;
+			padding: 4px 6px;
+			background: var(--palette-grey-900);
+			border: 1px solid var(--palette-grey-800);
+			border-radius: 4px;
+		}
+	}
+}
+
+.Table_actions {
+	width: 0;
+	div {
+		display: flex;
+		justify-content: center;
+		gap: var(--table-action-gap);
+	}
+}
+
+// ----------------------------------------------------------------------------- FORM
+
+.Form {
+	--form-input-border: var(--palette-grey-800);
+}
+
+.Form_input {
+
+	> span {
+		display: inline-block;
+		margin-bottom: 6px;
+	}
+	> span + span {
+		display: inline-block;
+		font-size: 12px;
+		float: right;
+		> svg {
+			vertical-align: bottom;
+			margin-right: 4px;
+		}
+	}
+
+	> input, textarea, select {
+		display: block;
+		padding: 8px;
+		border-radius: 8px;
+		border: 1px solid var(--form-input-border);
+		width: 100%;
+	}
+	> input {
+
+	}
+	> textarea {
+
+	}
+	> select {
+		padding-right: 12px;
+	}
+
+	&__warning {
+		> textarea {
+			outline: 2px solid orange;
+		}
+	}
+}
+
+.Form_input__horizontal {
+	display: flex;
+	align-items: center;
+	> span {
+		display: inline-block;
+		margin-bottom: 0;
+		margin-right: 12px;
+	}
+}
+
+.Form_separator {
+	border-top: 1px solid var(--form-input-border);
+	margin-top: 24px;
+	padding-top: 24px;
+}
+
+.Form_actions {
+	.Form_separator;
+	display: flex;
+	gap: 12px;
+	justify-content: flex-end;
+}

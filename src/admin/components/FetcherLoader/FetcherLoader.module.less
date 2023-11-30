@@ -1,0 +1,15 @@
+@import '../../styles/loader.less';
+
+.FetcherLoader {
+	--loader-size: 64px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin-top: calc(-1 * var(--loader-size) / 2);
+	margin-left: calc(-1 * var(--loader-size) / 2);
+	width: var(--loader-size);
+	height: var(--loader-size);
+
+	.Loader();
+}

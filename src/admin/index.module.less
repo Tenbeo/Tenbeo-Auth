@@ -1,0 +1,31 @@
+@import "styles/reset.less";
+@import "./styles/atoms.module.less";
+
+.App {
+	min-height: 100%;
+	font-family: Arial, sans-serif;
+}
+
+._menu {
+	width: var(--size-admin-menu);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+
+._content {
+	padding:
+		var(--size-page-padding)
+		var(--size-page-padding)
+		var(--size-page-padding)
+		calc(var(--size-admin-menu) + var(--size-page-padding));
+	min-height: 100%;
+}
+
+._page {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	min-height: calc( 100% - var(--size-page-padding) * 2 )
+}

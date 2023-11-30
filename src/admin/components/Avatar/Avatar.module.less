@@ -1,0 +1,24 @@
+@import "../../styles/atoms.module.less";
+
+.Avatar {
+	position: relative;
+	width: 48px;
+	height: 48px;
+	outline: 1px solid var(--palette-grey-800);
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+._image {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+._placeholder {
+	width: 100%;
+	height: 100%;
+	stroke: var(--palette-grey-800);
+}
