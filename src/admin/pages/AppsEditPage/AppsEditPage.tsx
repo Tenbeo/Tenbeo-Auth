@@ -78,7 +78,7 @@ export function AppsEditPage ( props:IAppsEditPageProps ) {
 			<br />
 			<label className={ SForms.Form_input }>
 				<span>Allowed Hosts</span>
-				<span>One by line, wildcards allowed. Empty to disable external access.</span>
+				<span>One by line, no scheme, no port. Empty to disable external access.</span>
 				<textarea
 					name="allowedHosts"
 					defaultValue={ (data.allowedHosts as string[] ?? []).join("\n") }
