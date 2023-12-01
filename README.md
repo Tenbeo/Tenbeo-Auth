@@ -31,6 +31,6 @@ Your application has to implement some basic operations to enable Tenbeo Login.
 - [Customize your Tenbeo Auth instance](./doc/04.customize.md)
 
 
-### Glossary
+### More info
 
-Available [here](./doc/00.glossary.md)
+A [glossary](./doc/00.glossary.md) is available.
