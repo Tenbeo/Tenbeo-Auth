@@ -14,6 +14,7 @@ import { sessionService } from "./services/session.service";
 import { appsModel } from "./models/apps.model";
 import { userModel } from "./models/user.model";
 import { attachSetupAPI } from "./api/setup.api";
+import { attachJSLibAPI } from "./api/jslib.api";
 
 // ----------------------------------------------------------------------------- OPTIONS & ENV
 
@@ -110,6 +111,7 @@ attachAuthAPI( _apiBase, _server, port )
 attachUserAPI( _apiBase, _server )
 attachAppsAPI( _apiBase, _server )
 attachSetupAPI( _apiBase, _server )
+attachJSLibAPI( _apiBase, _server )
 
 // ----------------------------------------------------------------------------- APPS
 // Boot up front-end applications

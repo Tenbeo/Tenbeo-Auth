@@ -91,13 +91,16 @@ export function attachAuthAPI ( base:string, server:FastifyInstance, port?:numbe
 		// Session has already been validated, send user
 		if ( session.status === "VALIDATED" ) {
 			try {
+				const user = userModel.getOneById( session.userId )
+				if ( !user )
+					return replyJsonFromError( "invalid_user", reply );
 				// todo : renew session date
 				return reply.send({
 					session: {
 						id: session.id,
 						status: session.status,
 					},
-					user: userModel.getOneById( session.userId )
+					user
 				})
 			}
 			catch ( error ) {
