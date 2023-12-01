@@ -6,9 +6,8 @@ import { nicePrint, oraTask, parseArguments, askInput } from "@zouloux/cli";
 import { config } from "dotenv"
 import { attachAuthAPI } from "./api/auth.api";
 import { dbMigrate } from "./db/migrate.db";
-import fastifyStatic from "@fastify/static"
 import { attachUserAPI } from "./api/user.api";
-import { attachFrontApp, getFastifyRewriteHandler, registerFastifyRewrite } from "./utils/fastify.utils";
+import { attachFrontApp, getFastifyRewriteHandler } from "./utils/fastify.utils";
 import { attachAppsAPI } from "./api/apps.api";
 import { sessionService } from "./services/session.service";
 import { appsModel } from "./models/apps.model";
