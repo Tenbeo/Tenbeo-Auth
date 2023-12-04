@@ -1,9 +1,12 @@
 
 # Tenbeo Auth
 
-**Tenbeo Auth** is a Sign-On middlware for the [Tenbeo Authentication Platform](https://tenbeo.ai).
+**Tenbeo Auth** is a Sign-On middleware for the [Tenbeo Authentication Platform](https://tenbeo.ai).
 
 It will manage **users** and their **sessions**. Follow those instructions to implement **Tenbeo Login** on your website or application.
+
+A [glossary](./doc/00.glossary.md) is available.
+
 
 ### How to install a new Tenbeo Auth Instance
 
@@ -11,9 +14,9 @@ It will manage **users** and their **sessions**. Follow those instructions to im
 - [Manually](./doc/01b.setup-manually.md)
 - [Deploy](./doc/01c.setup-deploy.md)
 
-[//]: # (### Tenbeo Auth admin panel)
-[//]: # ()
-[//]: # (- [Tenbeo Admin]&#40;./doc/02a.tenbeo-admin.md&#41;)
+### Tenbeo Auth admin panel
+- [Tenbeo Admin login](./doc/02a.tenbeo-admin.md)
+
 [//]: # (- [Tenbeo Applications]&#40;./doc/02b.tenbeo-applications.md&#41;)
 [//]: # (- [Tenbeo Users]&#40;./doc/02c.tenbeo-users.md&#41;)
 
@@ -29,8 +32,3 @@ Your application has to implement some basic operations to enable Tenbeo Login.
 ### Going further
 
 - [Customize your Tenbeo Auth instance](./doc/04.customize.md)
-
-
-### More info
-
-A [glossary](./doc/00.glossary.md) is available.
