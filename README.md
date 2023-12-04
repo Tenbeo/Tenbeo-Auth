@@ -5,7 +5,8 @@
 
 It will manage **users** and their **sessions**. Follow those instructions to implement **Tenbeo Login** on your website or application.
 
-A [glossary](./doc/00.glossary.md) is available.
+> [!NOTE]
+> A [glossary](./doc/00.glossary.md) is available.
 
 
 ### How to install a new Tenbeo Auth Instance
@@ -32,3 +33,4 @@ Your application has to implement some basic operations to enable Tenbeo Login.
 ### Going further
 
 - [Customize your Tenbeo Auth instance](./doc/04.customize.md)
+
