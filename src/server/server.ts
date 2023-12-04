@@ -27,8 +27,11 @@ const args = parseArguments({
 // Default port from argv
 const port = ( args.flags.port ?? ( args.flags.dev ? 3000 : 80 ) ) as number
 
-// Load dot env
-config({ path: resolve('../.env') })
+// Load dot env file and do not override process envs
+config({
+	path: resolve('../.env'),
+	override: false,
+})
 
 // Load package json version
 let _packageVersion = "unknown"

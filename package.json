@@ -16,11 +16,10 @@
     "server-dev": "node server.config.js --dev",
     "server-build": "node server.config.js",
     "server-start": "cd dist/ && node server.js",
-    "server-add-admin-user": "npm run server-build && cd dist/ && node server.js --add-admin-user",
     "-- ALL --": "",
     "dev": "clear && (npm run client-dev & (sleep .1 && npm run server-dev) & wait)",
     "build": "npm run client-build && npm run server-build",
-    "preview": "npm run build && npm run server-start"
+    "preview": "npm run build && npm run server-start -- --dev"
   },
   "dependencies": {
     "@fastify/cookie": "^9.2.0",
