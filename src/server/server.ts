@@ -126,8 +126,14 @@ attachFrontApp(_server, {
 // ----------------------------------------------------------------------------- SERVER START
 
 await oraTask(`Starting server on port ${port}`, async t => {
-	await _server.listen({ host: '0.0.0.0', port })
-	t.success(`Server started on port ${port}`)
+	try {
+		await _server.listen({ host: '0.0.0.0', port })
+		t.success(`Server started on port ${port}`)
+	}
+	catch (error) {
+		t.error(`Error while starting server on port ${port}`)
+		console.error( error )
+	}
 })
 
 // ----------------------------------------------------------------------------- SERVICES

@@ -1,6 +1,12 @@
 version: "3.7"
 services:
   tenbeo-auth :
-    build: "./"
+    build:
+      context: ".."
+      dockerfile: "docker/Dockerfile"
+    volumes:
+      - './data/:/root/data/'
+    environment:
+      TENBEO_AUTH_CLIENT_ADMIN_BASE: "/admin-test"
     ports:
-      - '80:80'
+      - '3000:80'
